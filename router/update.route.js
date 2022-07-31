@@ -75,8 +75,8 @@ router.post("/translatechange",async(req,res)=>{
 // })
 
 router.post('/delete', (req,res)=>{
-    res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   console.log("Файл удален")
   console.log(req.body)
   Todo.findOneAndDelete({_id:req.body.idfor},()=>{
