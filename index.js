@@ -3,14 +3,15 @@ const app=express()
 const path=require("path")
 const mongoose=require('mongoose')
 const routes=require("./router/update.route")
-app.use(express.json({extended:true}))
-app.use("/api", routes)
-app.use(express.urlencoded({extended:false}))
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "https://nodetest234.herokuapp.com/"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+app.use(express.json({extended:true}))
+app.use("/api", routes)
+app.use(express.urlencoded({extended:false}))
+
 app.use('/images',express.static(path.join(__dirname,"images")))
 app.use(express.static(path.join(__dirname, 'client/build')));
 const PORT=process.env.PORT || 5000
