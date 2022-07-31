@@ -14,7 +14,7 @@ router.post("/temme",async(req,res)=>{
 
 
 router.get("/", (req,res)=>{
-res.send("Это бэк")
+console.log("hello")
 })
 router.post("/kandzichange",async(req,res)=>{
 console.log(req.body)
