@@ -15,6 +15,10 @@ await mongoose.connect('mongodb+srv://kenan:2002azer@cluster0.puqo7.mongodb.net/
     app.listen(PORT,()=>{
         console.log("Server has been launched...")
     })
+        app.get("/", (req,res)=>{
+console.log("hello")
+res.send("hello")
+})
 }catch(e){
     console.log(e)
 }
