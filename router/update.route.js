@@ -5,6 +5,8 @@ const router=Router()
 const Todo=require("../schems/file")
 const Kandji=require("../schems/file")
 router.post("/temme",async(req,res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
+res.header("Access-Control-Allow-Headers", "X-Requested-With");
     console.log("Подключено к бэкэнду")
     const todos=await Todo.find({})
     res.json(todos)
