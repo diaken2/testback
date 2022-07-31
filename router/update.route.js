@@ -13,9 +13,7 @@ router.post("/temme",async(req,res)=>{
 })
 
 
-router.get("/", (req,res)=>{
-console.log("hello")
-})
+
 router.post("/kandzichange",async(req,res)=>{
 console.log(req.body)
 
