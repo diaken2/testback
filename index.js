@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 const PORT=process.env.PORT || 5000
 const start=async()=>{
     try{
-await mongoose.connect('mongodb+srv://kenan:2002azer@cluster0.puqo7.mongodb.net/?retryWrites=true&w=majority',{})
+await mongoose.connect('mongodb+srv://kenan:2002azer@cluster0.mhl8v.mongodb.net/?retryWrites=true&w=majority',{})
     app.listen(PORT,()=>{
         console.log("Server has been launched...")
     })
